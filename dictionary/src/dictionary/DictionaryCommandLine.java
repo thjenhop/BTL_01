@@ -5,18 +5,7 @@ import java.util.Scanner;
 
 public class DictionaryCommandLine {
 	DictionaryManagement manager = new DictionaryManagement();
-	
-	public static void main(String[] args) throws IOException {
-		DictionaryCommandLine x = new DictionaryCommandLine();
-		//x.dictionaryBasic();
-		//x.dictionaryAdvanced();
-		//x.manager.insertFromFile();
-		//x.showAllWord();
-		//x.dictionarySearch();
-		//x.manager.insertFromFile();
-		//x.showAllWord();
-	}
-	
+		
 	public void run() throws IOException {
 		System.out.println("1.Chức năng cơ bản");
 		System.out.println("2.Chức năng nâng cao");
