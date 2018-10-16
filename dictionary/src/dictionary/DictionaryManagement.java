@@ -40,9 +40,10 @@ public class DictionaryManagement {
 	
 	
 	public void insertFromFile() throws IOException {
-		BufferedReader input = new BufferedReader(new FileReader(file));
+		FileInputStream fi = new FileInputStream(file);
+       	 	InputStreamReader isr = new InputStreamReader(fi, "utf-8");
+        	BufferedReader input = new BufferedReader(isr);
 		int i;
-		int j = 0;
 		Word newWord = new Word();
 		while ( (i = input.read()) != -1 ) {
 			if( i == 10 ) { // la ki tu carriage return or 13
