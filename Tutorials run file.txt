@@ -1,0 +1,6 @@
+
+** Class main
+
+class main in: BTL_01\dictionary\src\dictionary\Main.java
+
+ 
