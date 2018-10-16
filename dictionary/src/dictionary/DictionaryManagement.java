@@ -40,7 +40,6 @@ public class DictionaryManagement {
 	
 	
 	public void insertFromFile() throws IOException {
-		long t0= System.currentTimeMillis();
 		BufferedReader input = new BufferedReader(new FileReader(file));
 		int i;
 		int j = 0;
@@ -71,9 +70,7 @@ public class DictionaryManagement {
 
 		}
 		dict.data.add(newWord);
-		System.out.println("done!");	
-		long t2= System.currentTimeMillis();
-		//System.out.println(t2-t0);
+		System.out.println("done!");
 		
 	}
 	
