@@ -35,19 +35,19 @@ public class DictionaryCommandLine {
 	}
 	public void dictionaryBasic() {
 		Scanner input = new Scanner(System.in);
-		int choise;
+		String choise;
 		do {
 			System.out.println("1.Nhập từ bàn phím");
 			System.out.println("2.Hiện tất cả từ");
 			System.out.print("Nhập lựa chọn : ");
-			choise = input.nextInt();
-			switch(choise) {
+			int choise_1 = input.nextInt();
+			switch(choise_1) {
 				case 1: manager.insertFromCommandLine();break;
 				case 2: showAllWord_basic();break;
 			}
 			System.out.print("Muốn tiếp tục(1_y/2_n) : ");
-			choise= input.nextInt();
-		}while ( choise == 1);
+			choise= input.next();
+		}while ( choise.equals("1")|| choise.equals("y"));
 	}
 	public void showAllWord_basic() {// chi in tu va nghia
 		System.out.print("\n");
@@ -63,7 +63,7 @@ public class DictionaryCommandLine {
 	
 	public void dictionaryAdvanced() throws IOException {
 		Scanner input = new Scanner(System.in);
-		int choise;
+		String choise;
 		do {
 			System.out.println("1.Lấy dữ liệu từ file(bắt buộc)");
 			System.out.println("2.Hiện tất cả từ");
@@ -91,8 +91,8 @@ public class DictionaryCommandLine {
 				}break;
 			}
 			System.out.print("Muốn tiếp tục(1_y/2_n) : ");
-			choise= input.nextInt();
-		}while ( choise == 1);
+			choise= input.next();
+		}while ( choise.equals("1")|| choise.equals("y"));
 	}
 	
 	public void dictionarySearch() {
@@ -109,14 +109,13 @@ public class DictionaryCommandLine {
 					}
 				}
 			}
-			System.out.println("Muốn tiếp tục tìm kiếm (1_y/2_n) : ");
-			int y = input.nextInt();
-			input.nextLine();
-			if( y == 2) _continue = false;
+			System.out.print("Muốn tiếp tục tìm kiếm (1_y/2_n) : ");
+			char y = input.nextLine().charAt(0);
+			if( y == 'n' || y == '2') _continue = false;
 		}while(_continue);
 		System.out.print("Muốn tra nghĩa (1_y/2_n) : ");
-		int z = input.nextInt();
-		if( z == 1 ) manager.dictionaryLookup();
+		String z = input.next();
+		if( z.equals("1") || z.equals("y") ) manager.dictionaryLookup();
 	}
 	public static String splitString(String s, int n) { 
 		String x = "";
