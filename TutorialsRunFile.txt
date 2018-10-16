@@ -1,0 +1,12 @@
+
+** Class main 
+
+class main in: BTL_01\dictionary\src\dictionary\Main.java
+use : run program
+
+** How to run file .jar
+
+Step 1: Open folder have file .jar you want run by commandline
+Step 2:	write "java -jar <nameFile.jar>"
+
+ 
