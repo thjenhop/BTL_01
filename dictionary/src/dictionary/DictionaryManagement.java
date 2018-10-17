@@ -51,7 +51,6 @@ public class DictionaryManagement {
 				newWord = new Word();
 			}
 			else {
-				//if( i != 10) {
 				String x =input.readLine();
 					if( (char)i == '@' ) {// la target + pronoun
 						x = x.trim();
@@ -66,7 +65,6 @@ public class DictionaryManagement {
 							newWord.setWord_explain(y);
 						}
 					}
-				//}
 			}
 
 		}
